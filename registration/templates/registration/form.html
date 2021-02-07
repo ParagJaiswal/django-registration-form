@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	<form action="" method="post" >
+		{% csrf_token %}
+		<fieldset style="width: 400px">
+			<legend>Registration Form</legend>
+			<table>
+			<tr>
+				<td>
+					<label>Name </label>
+				</td>
+			
+				<td>
+					<input type="text" name="name" placeholder="Enter Full Name" value="{{name}}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Gender </label>
+				</td>
+			
+				<td>
+					<input type="radio" name="r1" value="male">Male
+					<input type="radio" name="r1" value="female">Female
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Address</label>
+				</td>
+				<td>
+					<input type="text" name="address" placeholder="Enter Address">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>State</label>
+				</td>
+				<td>
+					<select name="state">
+						<option hidden="">Slect</option>
+						<option value="mp">Madhya pradesh</option>
+						
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>City</label>
+				</td>
+				<td>
+						<select name="city">
+						<option hidden="">Slect</option>
+						<option value="Indore">Indore</option>
+						<option value="Bhopal">Bhopal</option>
+					</select>
+
+										
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Email</label>
+				</td>
+				<td>
+					<input type="email" name="email" placeholder="Enter Mail ID">
+				</td>
+			</tr>
+			<tr><td><label>Number</label></td>
+			<td><input type="text" name="number" placeholder="Enter Number"></td></tr>
+			
+			
+			<tr><td><input type="submit" name="fsubmit" value="Submit">
+			<input type="submit" name="fclear" value="Clear"></td></tr>
+			</table>
+			
+			
+		</fieldset>
+
+	</form>
+	{{name}}<br>
+	{{gender}}<br>
+	{{address}}<br>
+	{{state}}<br>
+	{{city}}<br>
+	{{email}}<br>
+	{{number}}<br>
+	
+
+</body>
+</html>
